@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Task</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="min-h-screen bg-gradient-to-br from-gray-800 to-gray-900 text-white p-10">
+        <!-- Back Button -->
+        <a href="/" class="text-blue-400 hover:text-blue-300 text-sm mb-6 inline-block">&lt; Back to Tasks</a>
+
+        <!-- Edit Task -->
+        <div class="bg-gray-800 rounded-lg shadow-lg p-6 max-w-3xl mx-auto">
+            <h1 class="text-3xl font-bold mb-4 text-yellow-400">Edit Task</h1>
+            <form action="/edit/<%= title %>" method="post" class="space-y-4">
+                <input 
+                    type="text" 
+                    name="title" 
+                    value="<%= title %>" 
+                    class="w-full p-3 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-500">
+                <textarea 
+                    name="details" 
+                    class="w-full p-3 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-yellow-500"><%= content %></textarea>
+                <button 
+                    type="submit" 
+                    class="w-full bg-yellow-600 hover:bg-yellow-700 text-white py-3 rounded-lg font-bold">
+                    Save Changes
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

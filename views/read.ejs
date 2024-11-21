@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read Task</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="min-h-screen bg-gradient-to-br from-gray-800 to-gray-900 text-white p-10">
+        <!-- Back Button -->
+        <a href="/" class="text-blue-400 hover:text-blue-300 text-sm mb-6 inline-block">&lt; Back to Tasks</a>
+
+        <!-- Task Details -->
+        <div class="bg-gray-800 rounded-lg shadow-lg p-6 max-w-3xl mx-auto">
+            <h1 class="text-3xl font-bold mb-4 text-blue-400"><%= title %></h1>
+            <p class="text-gray-300"><%= content %></p>
+        </div>
+    </div>
+</body>
+</html>
